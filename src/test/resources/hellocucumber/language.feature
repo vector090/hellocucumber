@@ -1,0 +1,11 @@
+# language: no
+Egenskap: Gjett et ord
+
+  Scenario: Ordmaker starter et spill
+    Når Ordmaker starter et spill
+    Så må Ordmaker vente på at Gjetter blir med
+
+  Scenario: Gjetter blir med
+    Gitt at Ordmaker har startet et spill med ordet "bløtt"
+    Når Gjetter blir med på Ordmakers spill
+    Så må Gjetter gjette et ord på 5 bokstaver
