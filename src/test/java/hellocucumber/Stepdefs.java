@@ -31,4 +31,24 @@ public class Stepdefs {
     public void i_should_be_told(String expectedAnswer) throws Exception {
         assertEquals(expectedAnswer, actualAnswer);
     }
+
+
+    int had;
+    int have;
+
+    @Given("^I have (\\d+) cukes in my belly$")
+    public void i_have_cukes_in_my_belly(int had) throws Exception {
+        this.had = had;
+    }
+
+    @When("^I eat (\\d+)$")
+    public void i_eat(int eat) throws Exception {
+        this.had += eat;
+        //        this.had += 1; // Simulate failure
+    }
+
+    @Then("^I should have (\\d+) cukes in my belly$")
+    public void i_should_have_cukes_in_my_belly(int shouldHave) throws Exception {
+        assertEquals(shouldHave, had);
+    }
 }
