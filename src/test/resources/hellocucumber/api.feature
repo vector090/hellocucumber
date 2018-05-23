@@ -14,3 +14,6 @@ Feature: cucumber API
       | cat   |
       | dog   |
       | mouse |
+
+  Scenario: test hooks
+    Given I have the following animals: cow, horse, sheep
