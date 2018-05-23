@@ -15,6 +15,8 @@ public class Stepdefs_API {
     @Before
     // This "Before" is just like junit's "Before".
     // And it affects ALL scenarios, not only those related to this Stepdefs.
+    //
+    // The recommended approach to clean a database between scenarios is to use a Before hook to remove all data before a scenario starts.
     public void doSomethingBefore() {
         System.out.println(" >> This is something done BEFORE any scenarios are run.\n");
     }
