@@ -1,8 +1,12 @@
 package hellocucumber;
 
+import org.junit.BeforeClass;
+
 import java.util.List;
 
 import cucumber.api.DataTable;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 
@@ -12,7 +16,21 @@ public class Stepdefs_API {
     // This "Before" is just like junit's "Before".
     // And it affects ALL scenarios, not only those related to this Stepdefs.
     public void doSomethingBefore() {
-        System.out.println(" >> This is something done before any scenarios are run.\n");
+        System.out.println(" >> This is something done BEFORE any scenarios are run.\n");
+    }
+
+    @BeforeClass
+    public static void oneTimeInit() {
+        System.out.println("This JUnit @BeforeClass is never run at all in cucumber");
+    }
+
+    @After
+    //    public void doSomethingAfter() { // This signature works too.
+    public void doSomethingAfter(Scenario s) {
+        System.out.printf(" << This is something done AFTER any scenarios are run."
+                        + "Scenario id:%s, lines:%s, name:%s, sourceTagNames:%s, status:%s, uri:%s \n\n",
+                s.getId(), s.getLines(), s.getName(), s.getSourceTagNames(), s.getStatus(),
+                s.getUri());
     }
 
     //    @Given("^I have the following animals: cow, horse, sheep$")
