@@ -16,15 +16,6 @@ Feature: Demonstrates Gherkin Reference
     Then the Breaker must guess a word with 5 characters
     # While it might be tempting to implement Then steps to just look in the database - resist that temptation!
 
-  # Not work
-#  Example: Multiple Givens
-#    Given one thing
-#    Given another thing
-#    Given yet another thing
-#    When I open my eyes
-#    Then I should see something
-#    Then I shouldn't see something else
-
   Scenario: : Multiple Givens
     Given one thing
     And another thing
@@ -33,9 +24,3 @@ Feature: Demonstrates Gherkin Reference
     Then I should see something
     But I shouldn't see something else
 #    And I shouldn't see something else # This seems work too.
-
-    # TODO Not work
-#  Scenario Outline: some scenarios
-#    Examples:
-#    Example: hi
-#    Given hello
