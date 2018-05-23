@@ -17,3 +17,4 @@ Feature: cucumber API
 
   Scenario: test hooks
     Given I have the following animals: cow, horse, sheep
+
