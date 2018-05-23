@@ -24,4 +24,14 @@ public class Stepdefs_API {
         List<String> list = table.asList(String.class);
         System.out.println("The Stepdefs got friends: " + list);
     }
+
+    @Given("^I have the following livings:$")
+    // Modify the arg from DataTable to List by hand:
+    public void i_have_the_following_livings(List<String> list) throws Exception {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+        // E,K,V must be a scalar (String, Integer, Date, enum etc)
+        System.out.println("The Stepdefs got livings: " + list);
+    }
 }

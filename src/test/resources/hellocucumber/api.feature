@@ -9,3 +9,8 @@ Feature: cucumber API
       | dog   |
       | mouse |
 
+  Scenario: data table using table, and auto conversion
+    Given I have the following livings:
+      | cat   |
+      | dog   |
+      | mouse |
