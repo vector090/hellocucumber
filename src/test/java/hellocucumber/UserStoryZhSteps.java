@@ -30,11 +30,11 @@ public class UserStoryZhSteps {
     public void 我学习同事编写的用户故事和验收测试用例() throws Exception {
     }
 
-    @当("^我学习Cucumber文档$")
+    @当("^我阅读Cucumber文档$")
     public void 我学习cucumber文档() throws Exception {
     }
 
-    @那么("^我应该学会用Cucumber编写用户故事和验收测试用例$")
+    @那么("^我应该知道如何用Cucumber编写用户故事和验收测试用例$")
     public void 我应该学会用cucumber编写用户故事和验收测试用例() throws Exception {
     }
 }
