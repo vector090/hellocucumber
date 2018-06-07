@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-mvn test -Dcucumber.options='--tags @important'
+set -x
+
+# Only run given tag.
+#mvn test -Dcucumber.options='--tags @important'
+
+# Don't run given tag.
+mvn test -Dcucumber.options='--tags ~@important'
+
 #mvn test -Dcucumber.options="--tags '@important and @qa_ready'"
 #mvn test -Dcucumber.options="--tags '@important or @qa_ready'"
 
+# This also works.
 #CUCUMBER_OPTIONS="--tags '@important'" mvn test
