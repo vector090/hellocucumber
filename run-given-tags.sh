@@ -6,7 +6,8 @@ set -x
 #mvn test -Dcucumber.options='--tags @important'
 
 # Don't run given tag.
-mvn test -Dcucumber.options='--tags ~@important'
+#mvn test -Dcucumber.options='--tags ~@important' # Deprecated syntax.
+mvn test -Dcucumber.options="--tags 'not @important'" # New syntax.
 
 #mvn test -Dcucumber.options="--tags '@important and @qa_ready'"
 #mvn test -Dcucumber.options="--tags '@important or @qa_ready'"
