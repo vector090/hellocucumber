@@ -20,4 +20,17 @@ public class UserStorySteps {
     @Then("^I should have a basic understanding of Cucumber$")
     public void i_should_have_a_basic_understanding_of_Cucumber() throws Exception {
     }
+
+    @Given("^AGiven$")
+    public void agiven() throws Exception {
+    }
+
+    @When("^AWhen$")
+    public void awhen() throws Exception {
+    }
+
+    @Then("^AThen$")
+    public void athen() throws Exception {
+        System.out.println("Asserting 'then'");
+    }
 }

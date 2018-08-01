@@ -15,3 +15,8 @@
     当 我学习同事编写的用户故事和验收测试用例
     并且 我阅读Cucumber文档
     那么 我应该知道如何用Cucumber编写用户故事和验收测试用例
+
+  场景: : Test dup with Chinese
+    假设 AGiven
+    当 AWhen
+    那么 AThen

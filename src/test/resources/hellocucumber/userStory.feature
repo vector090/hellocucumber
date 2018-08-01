@@ -8,3 +8,8 @@ Feature: Explaining Cucumber
     When I ask my coworker to give an overview of how Cucumber works
     And I listen to their explanation
     Then I should have a basic understanding of Cucumber
+
+  Scenario: Test dup with Chinese
+    Given AGiven
+    When AWhen
+    Then AThen
